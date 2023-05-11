@@ -1,0 +1,74 @@
+body {
+  font-family: $main-font;
+}
+
+.container {
+  max-width: $content-width;
+  padding: 0 $content-x-padding;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.align-center {
+  align-items: center;
+}
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.text-center {
+  text-align: center;
+}
+
+@include phone {
+  .text-center {
+    text-align: initial;
+  }
+}
+
+a {
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: $content-color;
+}
+
+@include desktop {
+  .container {
+    max-width: $breackpoint_xxl;
+  }
+}
+
+@include laptop {
+  .container {
+    max-width: $breackpoint_xl;
+  }
+}
+
+@include tablet {
+  .container {
+    max-width: $breackpoint_md;
+  }
+}
+
+@include phone {
+  .container {
+    max-width: $breackpoint_sm;
+  }
+}
